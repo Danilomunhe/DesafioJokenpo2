@@ -27,7 +27,7 @@ public class NewGame {
 		while (resposta.equals("Sim")) {
 			System.out.print("Informe a quantidade de partidas: ");
 			numeroDePartidas = leitor.nextInt();
-			if(numeroDePartidas % 2 == 0) {
+			if(numeroDePartidas % 2 == 0 && numeroDePartidas < 3) {
 				resposta="Sim";
 				System.out.println("Atenção a quantidade de partidas deve recber um número ímpar");
 				System.out.println("___________________________________");
