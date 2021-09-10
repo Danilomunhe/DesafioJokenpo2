@@ -24,7 +24,7 @@ public class NewGame {
 		System.out.println();
 		
 		
-		while (resposta.equals("Sim")) {
+		while (resposta.equals("Sim") || resposta.equals("sim") || resposta.equalsIgnoreCase("s")) {
 			System.out.print("Informe a quantidade de partidas: ");
 			numeroDePartidas = leitor.nextInt();
 			if(numeroDePartidas % 2 == 0 && numeroDePartidas < 3) {
@@ -85,7 +85,7 @@ public class NewGame {
 			} else if (vitoriasPc == vitoriasUser){
 				System.out.println("Deseja jogar o desempate? ");
 				resposta = leitor.next();
-				if(resposta.equals("sim")) {
+				if (resposta.equals("Sim") || resposta.equals("sim") || resposta.equalsIgnoreCase("s")) {
 				while(vitoriasPc==vitoriasUser) {
 					System.out.print("Escolha um número: ");
 					user = leitor.nextInt();
@@ -129,7 +129,7 @@ public class NewGame {
 			System.out.println("Número de empates: " + empates);
 			System.out.println("Deseja jogar novamente ? ");
 			resposta = leitor.next();
-			if(resposta.equals("Sim")){
+			if(resposta.equals("Sim") || resposta.equals("sim") || resposta.equalsIgnoreCase("s")){
 				contador=1;
 				vitoriasPc=0;
 				vitoriasUser=0;		
