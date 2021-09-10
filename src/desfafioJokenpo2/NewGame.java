@@ -49,7 +49,8 @@ public class NewGame {
 					System.out.println("Você escolheu tesoura");
 				} else {
 					System.out.println("Você escolheu uma opção invalida");
-					System.out.println("Por ter feito isso...Vitória do Computador");
+					System.out.print("Escolha um número novamente, idiota: ");
+					user = leitor.nextInt();
 				}
 
 				if (comp == 1) {
@@ -135,7 +136,7 @@ public class NewGame {
 				vitoriasUser=0;		
 				empates=0;
 			}else {
-				System.out.println("Obrigado por jogar");
+				System.out.println("Obrigado por jogar!!");
 			}
 		}
 			
