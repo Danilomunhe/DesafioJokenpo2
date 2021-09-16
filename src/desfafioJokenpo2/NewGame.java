@@ -11,8 +11,7 @@ public class NewGame {
 		Scanner leitor = new Scanner(System.in);
 
 		String resposta = "Sim";
-		int numeroDePartidas = 1, usuario, computador, vitoriasPc = 0, vitoriasUsuario = 0, contador = 1, empates = 0;
-		computador = sorteio.nextInt(3) + 1;
+		
 
 		System.out.println("*****TUTORIAL*****");
 		System.out.println("Comandos: ");
@@ -23,6 +22,8 @@ public class NewGame {
 		System.out.println();
 
 		while (resposta.equals("Sim") || resposta.equals("sim") || resposta.equalsIgnoreCase("s")) {
+			int numeroDePartidas = 1, usuario, computador, vitoriasPc = 0, vitoriasUsuario = 0, contador = 1, empates = 0;
+			
 			System.out.print("Informe a quantidade de partidas: ");
 			numeroDePartidas = leitor.nextInt();
 
@@ -56,7 +57,7 @@ public class NewGame {
 							System.out.println("___________________________________");
 						}
 					}
-
+					computador = sorteio.nextInt(3) + 1;
 					if (computador == 1) {
 						System.out.println("O computador escolheu pedra");
 					} else if (computador == 2) {
@@ -112,7 +113,7 @@ public class NewGame {
 									System.out.println("___________________________________");
 								}
 							}
-
+							computador = sorteio.nextInt(3) + 1;
 							if (computador == 1) {
 								System.out.println("O computador escolheu pedra");
 							} else if (computador == 2) {
