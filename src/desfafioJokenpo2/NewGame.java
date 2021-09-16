@@ -33,6 +33,8 @@ public class NewGame {
 				System.out.println("___________________________________");
 				System.out.println();
 			} else {
+				int vitorias= (numeroDePartidas/2)+1;
+				System.out.println("O valor da vitória é: " + vitorias);
 				while (contador <= numeroDePartidas && !(vitoriasUsuario > (numeroDePartidas - empates) / 2
 						|| vitoriasPc > (numeroDePartidas - empates) / 2)) {
 					System.out.println("___________________________________");
@@ -43,12 +45,12 @@ public class NewGame {
 					usuario = leitor.nextInt();
 
 					if (usuario == 1) {
-						System.out.println("Você escolheu pedra");
+						System.out.println("Você escolheu: " + usuario + " - pedra, The Rock");
 					} else if (usuario == 2) {
-						System.out.println("Você escolheu papel");
-					} else if (usuario == 3) {
-						System.out.println("Você escolheu tesoura");
-					} else {
+						System.out.println("Você escolheu: " + usuario + " - papel, a carta dos deuses");
+					} else if (usuario == 3) { 
+						System.out.println("Você escolheu: " + usuario + " - tesoura, a espada dos nobres");
+					}else {
 						while (usuario >= 4) {
 							System.out.println("___________________________________");
 							System.out.println("Você escolheu uma opção invalida");
@@ -59,28 +61,35 @@ public class NewGame {
 					}
 					computador = sorteio.nextInt(3) + 1;
 					if (computador == 1) {
-						System.out.println("O computador escolheu pedra");
+						System.out.println("O computador escolheu: " + computador + " - pedra, The Rock");
 					} else if (computador == 2) {
-						System.out.println("O computador escolheu papel");
-					} else {
-						System.out.println("O computador escolheu tesoura");
-					}
-
+						System.out.println("O computador escolheu: " + computador + " - papel, a carta dos deuses");
+					} else{
+						System.out.println("O computador escolheu: "  + computador + " - tesoura, a espada dos nobres");
+					} 
+					
 					if (computador == 1 && usuario == 2 || computador == 2 && usuario == 3 || computador == 3 && usuario == 1) {
 						System.out.println("Você venceu a batalha");
 						System.out.println("___________________________________");
 						vitoriasUsuario++;
 						contador++;
+						System.out.println("O placar atual é: " + "Usuário: " + vitoriasUsuario + " x " + "Computador: " + vitoriasPc);
+						System.out.println("___________________________________");
+						
 					} else if (computador == usuario) {
 						System.out.println("Empate");
 						System.out.println("___________________________________");
 						contador++;
 						empates++;
+						System.out.println("O placar atual é: " + "Usuário: " + vitoriasUsuario + " x " + "Computador: " + vitoriasPc);
+						System.out.println("___________________________________");
 					} else {
 						System.out.println("Você Perdeu a batalha");
 						System.out.println("___________________________________");
 						vitoriasPc++;
 						contador++;
+						System.out.println("O placar atual é: " + "Usuário: " + vitoriasUsuario + " x " + "Computador: " + vitoriasPc);
+						System.out.println("___________________________________"); 				
 					}
 
 				}
@@ -97,14 +106,14 @@ public class NewGame {
 
 							System.out.print("Escolha um número: ");
 							usuario = leitor.nextInt();
-
+                               
 							if (usuario == 1) {
-								System.out.println("Você escolheu pedra");
+								System.out.println("Você escolheu: " + usuario + " - pedra, The Rock");
 							} else if (usuario == 2) {
-								System.out.println("Você escolheu papel");
+								System.out.println("Você escolheu: " + usuario + " - papel, a carta dos deuses");
 							} else if (usuario == 3) {
-								System.out.println("Você escolheu tesoura");
-							} else {
+								System.out.println("Você escolheu " + usuario + " - tesoura, a espada dos nobres");
+							}  else {
 								while (usuario >= 4) {
 									System.out.println("___________________________________");
 									System.out.println("Você escolheu uma opção invalida");
@@ -115,12 +124,12 @@ public class NewGame {
 							}
 							computador = sorteio.nextInt(3) + 1;
 							if (computador == 1) {
-								System.out.println("O computador escolheu pedra");
+								System.out.println("O computador escolheu: " + computador + " - pedra, The Rock");
 							} else if (computador == 2) {
-								System.out.println("O computador escolheu papel");
-							} else {
-								System.out.println("O computador escolheu tesoura");
-							}
+								System.out.println("O computador escolheu: " + computador + " - papel, a carta dos deuses");
+							} else{
+								System.out.println("O computador escolheu: "  + computador + " - tesoura, a espada dos nobres");
+							} 
 
 							if (computador == 1 && usuario == 2 || computador == 2 && usuario == 3 || computador == 3 && usuario == 1) {
 								System.out.println("Você venceu a batalha");
