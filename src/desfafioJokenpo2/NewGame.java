@@ -11,8 +11,8 @@ public class NewGame {
 		Scanner leitor = new Scanner(System.in);
 
 		String resposta = "Sim";
-		int numeroDePartidas = 1, user, comp, vitoriasPc = 0, vitoriasUser = 0, contador = 1, empates = 0;
-		comp = sorteio.nextInt(3) + 1;
+		int numeroDePartidas = 1, usuario, computador, vitoriasPc = 0, vitoriasUsuario = 0, contador = 1, empates = 0;
+		computador = sorteio.nextInt(3) + 1;
 
 		System.out.println("*****TUTORIAL*****");
 		System.out.println("Comandos: ");
@@ -32,45 +32,45 @@ public class NewGame {
 				System.out.println("___________________________________");
 				System.out.println();
 			} else {
-				while (contador <= numeroDePartidas && !(vitoriasUser > (numeroDePartidas - empates) / 2
+				while (contador <= numeroDePartidas && !(vitoriasUsuario > (numeroDePartidas - empates) / 2
 						|| vitoriasPc > (numeroDePartidas - empates) / 2)) {
 					System.out.println("___________________________________");
 					System.out.println();
 					System.out.println("Partida " + contador);
 
 					System.out.print("Escolha um número: ");
-					user = leitor.nextInt();
+					usuario = leitor.nextInt();
 
-					if (user == 1) {
+					if (usuario == 1) {
 						System.out.println("Você escolheu pedra");
-					} else if (user == 2) {
+					} else if (usuario == 2) {
 						System.out.println("Você escolheu papel");
-					} else if (user == 3) {
+					} else if (usuario == 3) {
 						System.out.println("Você escolheu tesoura");
 					} else {
-						while (user >= 4) {
+						while (usuario >= 4) {
 							System.out.println("___________________________________");
 							System.out.println("Você escolheu uma opção invalida");
 							System.out.print("Escolha um número novamente, idiota: ");
-							user = leitor.nextInt();
+							usuario = leitor.nextInt();
 							System.out.println("___________________________________");
 						}
 					}
 
-					if (comp == 1) {
+					if (computador == 1) {
 						System.out.println("O computador escolheu pedra");
-					} else if (comp == 2) {
+					} else if (computador == 2) {
 						System.out.println("O computador escolheu papel");
 					} else {
 						System.out.println("O computador escolheu tesoura");
 					}
 
-					if (comp == 1 && user == 2 || comp == 2 && user == 3 || comp == 3 && user == 1) {
+					if (computador == 1 && usuario == 2 || computador == 2 && usuario == 3 || computador == 3 && usuario == 1) {
 						System.out.println("Você venceu a batalha");
 						System.out.println("___________________________________");
-						vitoriasUser++;
+						vitoriasUsuario++;
 						contador++;
-					} else if (comp == user) {
+					} else if (computador == usuario) {
 						System.out.println("Empate");
 						System.out.println("___________________________________");
 						contador++;
@@ -83,50 +83,50 @@ public class NewGame {
 					}
 
 				}
-				if (vitoriasUser > vitoriasPc) {
+				if (vitoriasUsuario > vitoriasPc) {
 					System.out.println("Você venceu a guerra ");
-					System.out.println("Placar jogador: " + vitoriasUser);
+					System.out.println("Placar jogador: " + vitoriasUsuario);
 					System.out.println("Placar pc: " + vitoriasPc);
-				} else if (vitoriasPc == vitoriasUser) {
+				} else if (vitoriasPc == vitoriasUsuario) {
 					System.out.println("Deseja jogar o desempate? ");
 					resposta = leitor.next();
 					System.out.println("___________________________________");
 					if (resposta.equals("Sim") || resposta.equals("sim") || resposta.equalsIgnoreCase("s")) {
-						while (vitoriasPc == vitoriasUser) {
+						while (vitoriasPc == vitoriasUsuario) {
 
 							System.out.print("Escolha um número: ");
-							user = leitor.nextInt();
+							usuario = leitor.nextInt();
 
-							if (user == 1) {
+							if (usuario == 1) {
 								System.out.println("Você escolheu pedra");
-							} else if (user == 2) {
+							} else if (usuario == 2) {
 								System.out.println("Você escolheu papel");
-							} else if (user == 3) {
+							} else if (usuario == 3) {
 								System.out.println("Você escolheu tesoura");
 							} else {
-								while (user >= 4) {
+								while (usuario >= 4) {
 									System.out.println("___________________________________");
 									System.out.println("Você escolheu uma opção invalida");
 									System.out.print("Escolha um número novamente, idiota: ");
-									user = leitor.nextInt();
+									usuario = leitor.nextInt();
 									System.out.println("___________________________________");
 								}
 							}
 
-							if (comp == 1) {
+							if (computador == 1) {
 								System.out.println("O computador escolheu pedra");
-							} else if (comp == 2) {
+							} else if (computador == 2) {
 								System.out.println("O computador escolheu papel");
 							} else {
 								System.out.println("O computador escolheu tesoura");
 							}
 
-							if (comp == 1 && user == 2 || comp == 2 && user == 3 || comp == 3 && user == 1) {
+							if (computador == 1 && usuario == 2 || computador == 2 && usuario == 3 || computador == 3 && usuario == 1) {
 								System.out.println("Você venceu a batalha");
 								System.out.println("___________________________________");
-								vitoriasUser++;
+								vitoriasUsuario++;
 								contador++;
-							} else if (comp == user) {
+							} else if (computador == usuario) {
 								System.out.println("Empate");
 								System.out.println("___________________________________");
 								contador++;
@@ -143,7 +143,7 @@ public class NewGame {
 					System.out.println("Você perdeu a guerra");
 					System.out.println("___________________________________");
 				}
-				System.out.println("Placar jogador: " + vitoriasUser);
+				System.out.println("Placar jogador: " + vitoriasUsuario);
 				System.out.println("Placar pc: " + vitoriasPc);
 				System.out.println("Número de empates: " + empates);
 				System.out.println("___________________________________");
@@ -152,7 +152,7 @@ public class NewGame {
 				if (resposta.equals("Sim") || resposta.equals("sim") || resposta.equalsIgnoreCase("s")) {
 					contador = 1;
 					vitoriasPc = 0;
-					vitoriasUser = 0;
+					vitoriasUsuario = 0;
 					empates = 0;
 				} else {
 					System.out.println("Obrigado por jogar!!");
