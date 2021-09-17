@@ -95,8 +95,6 @@ public class NewGame {
 				}
 				if (vitoriasUsuario > vitoriasPc) {
 					System.out.println("Você venceu a guerra ");
-					System.out.println("Placar jogador: " + vitoriasUsuario);
-					System.out.println("Placar pc: " + vitoriasPc);
 				} else if (vitoriasPc == vitoriasUsuario) {
 					System.out.println("Deseja jogar o desempate? ");
 					resposta = leitor.next();
