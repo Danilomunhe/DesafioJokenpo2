@@ -43,21 +43,21 @@ public class NewGame {
 
 					System.out.print("Escolha um número: ");
 					usuario = leitor.nextInt();
+					
+					while (usuario >= 4) {
+						System.out.println("___________________________________");
+						System.out.println("Você escolheu uma opção invalida");
+						System.out.print("Escolha um número novamente, idiota: ");
+						usuario = leitor.nextInt();
+						System.out.println("___________________________________");
+					}
 
 					if (usuario == 1) {
 						System.out.println("Você escolheu: " + usuario + " - pedra, The Rock");
 					} else if (usuario == 2) {
 						System.out.println("Você escolheu: " + usuario + " - papel, a carta dos deuses");
-					} else if (usuario == 3) { 
+					} else{ 
 						System.out.println("Você escolheu: " + usuario + " - tesoura, a espada dos nobres");
-					}else {
-						while (usuario >= 4) {
-							System.out.println("___________________________________");
-							System.out.println("Você escolheu uma opção invalida");
-							System.out.print("Escolha um número novamente, idiota: ");
-							usuario = leitor.nextInt();
-							System.out.println("___________________________________");
-						}
 					}
 					computador = sorteio.nextInt(3) + 1;
 					if (computador == 1) {
